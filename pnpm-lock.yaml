@@ -271,6 +271,9 @@ importers:
       '@rcade/plugin-input-spinners':
         specifier: workspace:*
         version: link:../plugins/input-spinners/clients/typescript
+      '@rcade/plugin-marquee':
+        specifier: workspace:*
+        version: link:../plugins/marquee/clients/typescript
       '@rcade/plugin-menu':
         specifier: workspace:*
         version: link:../plugins/menu/clients/typescript
@@ -363,6 +366,34 @@ importers:
         version: 39.8.2
 
   plugins/input-spinners/clients/typescript:
+    dependencies:
+      '@rcade/sdk':
+        specifier: ^0.2.2
+        version: 0.2.2(typescript@5.9.3)
+      typescript:
+        specifier: ^5.0.0
+        version: 5.9.3
+
+  plugins/marquee:
+    dependencies:
+      '@rcade/sdk-plugin':
+        specifier: ^0.1.0
+        version: 0.1.0(typescript@5.9.3)
+      typescript:
+        specifier: ^5
+        version: 5.9.3
+      ws:
+        specifier: ^8.18.0
+        version: 8.19.0
+    devDependencies:
+      '@types/node':
+        specifier: ^22
+        version: 22.19.15
+      '@types/ws':
+        specifier: ^8
+        version: 8.18.1
+
+  plugins/marquee/clients/typescript:
     dependencies:
       '@rcade/sdk':
         specifier: ^0.2.2
@@ -3843,7 +3874,6 @@ packages:
 
   libsql@0.5.22:
     resolution: {integrity: sha512-NscWthMQt7fpU8lqd7LXMvT9pi+KhhmTHAJWUB/Lj6MWa0MKFv0F2V4C6WKKpjCVZl0VwcDz4nOI3CyaT1DDiA==}
-    cpu: [x64, arm64, wasm32, arm]
     os: [darwin, linux, win32]
 
   lightningcss-android-arm64@1.31.1:
@@ -7178,7 +7208,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.2.0
       '@types/keyv': 3.1.4
-      '@types/node': 25.5.0
+      '@types/node': 22.19.15
       '@types/responselike': 1.0.3
 
   '@types/cookie@0.6.0': {}
@@ -7191,7 +7221,7 @@ snapshots:
 
   '@types/fs-extra@9.0.13':
     dependencies:
-      '@types/node': 25.5.0
+      '@types/node': 22.19.15
 
   '@types/http-cache-semantics@4.2.0': {}
 
@@ -7201,7 +7231,7 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 25.5.0
+      '@types/node': 22.19.15
 
   '@types/ms@2.1.0': {}
 
@@ -7225,13 +7255,13 @@ snapshots:
 
   '@types/plist@3.0.5':
     dependencies:
-      '@types/node': 25.5.0
+      '@types/node': 22.19.15
       xmlbuilder: 15.1.1
     optional: true
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 25.5.0
+      '@types/node': 22.19.15
 
   '@types/semver@7.7.1': {}
 
@@ -7239,7 +7269,7 @@ snapshots:
 
   '@types/tar-stream@3.1.4':
     dependencies:
-      '@types/node': 25.5.0
+      '@types/node': 22.19.15
 
   '@types/tar@6.1.13':
     dependencies:
@@ -7269,11 +7299,11 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 25.5.0
+      '@types/node': 22.19.15
 
   '@types/yauzl@2.10.3':
     dependencies:
-      '@types/node': 25.5.0
+      '@types/node': 22.19.15
     optional: true
 
   '@typescript-eslint/types@8.57.0': {}
